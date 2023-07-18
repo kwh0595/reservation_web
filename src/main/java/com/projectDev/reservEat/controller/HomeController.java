@@ -23,7 +23,6 @@ public class HomeController {
     public String login(@ModelAttribute MemberDTO memberDTO,HttpSession session){
         System.out.println("login page");
         MemberDTO loginResult = memberService.login(memberDTO);
-        System.out.println(loginResult);
         if(loginResult !=null){
             //login 성공
             session.setAttribute("loginEmail",loginResult.getEmail());
@@ -46,5 +45,19 @@ public class HomeController {
         System.out.println("memberDTO = " + memberDTO);
         Long memberId = memberService.join(memberDTO);
         return "reserveat";
+    }
+    @GetMapping("/INFO")
+    public String information(MemberDTO memberDTO){
+        return "my_info";
+    }
+
+    @GetMapping("/HOME")
+    public String home(MemberDTO memberDTO){
+        return "home";
+    }
+
+    @GetMapping("/SEARCH")
+    public String search(MemberDTO memberDTO){
+        return "search";
     }
 }

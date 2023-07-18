@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head lang="en" xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         .bottom_menu { position: fixed; bottom: 0px; left: 0px; width: 100%; height: 50px; z-index:100; border-top: 1px solid black; background-color: white }
-        .bottom_menu > div { float: left; width: 20%; height: 100%; text-align: center; padding-top: 13px; }
+        .bottom_menu > div { float: left; width: 20%; height: 100%; text-align: center; padding-top: 30px; }
     </style>
-</head>
+</head>0
 <body>
+모바일 bottom 메뉴 테스트
 
-session 값 확인: <p th:text="${session.loginEmail}"></p>
+
 <div class="bottom_menu">
-    <div>홈</div>
-    <div>검색</div>
-    <div>내 정보 </div>
-</div>
+    <form action = "/" method="post">
+        <a href = "/HOME"><input type = "button" value = "홈"></a>
+        <a href = "/SEARCH"><input type ="button" value ="검색"></a>
+        <a href = "/INFO"><input type = "button" value ="내 정보"></a>
+    </form>
 </body>
 </html>

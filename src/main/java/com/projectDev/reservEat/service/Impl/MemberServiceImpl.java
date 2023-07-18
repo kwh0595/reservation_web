@@ -29,7 +29,6 @@ public class MemberServiceImpl implements MemberService {
          2. DB에서 조회한 비밀번호와 사용자가 입력한 비밀번호가 일치하는지 판단
        */
         Optional<MemberEntity> byMemberEmail = memberRepository.findByEmail(memberDTO.getEmail());
-        System.out.println(byMemberEmail);
         if(byMemberEmail.isPresent()){
             //조회 결과가 있다(해당 이메일을 가진 회원 정보가 존재)
            MemberEntity memberEntity= byMemberEmail.get();
@@ -48,7 +47,7 @@ public class MemberServiceImpl implements MemberService {
         }
         else{
             //조회 결과가 없다(해당 이메일을 가진 회원 정보가 미존재)
-            System.out.println("조회된 결과가 없읍니다.");
+            System.out.println("조회된 결과가 없습니다.");
             return null;
         }
     }
