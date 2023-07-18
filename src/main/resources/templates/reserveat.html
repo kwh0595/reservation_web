@@ -11,16 +11,25 @@
   </style>
 </head>
 <body>
+<!--
 <div>
-  <label> 아이디: <input id = "id" type = "text"></label> <!--id 받아오기-->
+  <label> 아이디: <input id = "id" type = "text"></label>
 </div>
 <div>
   <label> 비밀번호: <input id = "pw" type = "password"></label>
-</div>
+  </div>-->
 
-<div>
-  <a href ="/join_page"><input type = "button" value = "회원가입"></a> <!--join.html이 회원가입 페이지로 이동-->
-  <input type = "button" value = "로그인" onclick = "login();"> <!--로그인 버튼을 누르면 login()함수 실행(자바스크립트에서)-->
-</div>
+<form action="/" method="post">
+  아이디 : <input type="text" name="email"><br>
+  비밀번호 : <input type="password" name="password"><br>
+  <a href ="/join_page"><input type = "button" value = "회원가입"></a>
+  <input type="submit" value="로그인">
+</form>
+<!--<div>
+  <a href ="/join_page"><input type = "button" value = "회원가입"></a> oin.html이 회원가입 페이지로 이동
+  <input type = "button" value = "로그인" onclick = "login();"> -로그인 버튼을 누르면 login()함수 실행(자바스크립트에서)
+</div>-->
 </body>
 </html>
+
+

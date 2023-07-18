@@ -23,4 +23,5 @@ public class MemberEntity {
 
     @Column
     private String name;
+
 }
